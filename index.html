@@ -1,52 +1,66 @@
-﻿<!DOCTYPE html>
-<html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>會員專區</title>
-  <link rel="stylesheet" href="static/css/style.css">
+  <title>शाम की सोच</title>
+  <meta name="description" content="एक छोटी कहानी: रोजमर्रा की दिनचर्या, छोटे चुनाव और व्यक्तिगत विकास के बारे में।">
+  <!-- 可替换为本地或 Google 字体 -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f7f9; --card:#ffffff; --text:#0f172a; --muted:#6b7280; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Noto Sans Devanagari', 'Noto Sans', sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    a.skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    a.skip:focus{left:12px;top:12px;width:auto;height:auto;background:#000;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none}
 
-  <!-- Facebook Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
-    n.queue=[]; t=b.createElement(e); t.async=!0;
-    t.src=v; s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '你的-Pixel-ID'); 
-    fbq('track', 'PageView');
-  </script>
+    .container{max-width:760px;margin:48px auto;padding:28px;background:var(--card);border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.06)}
+    header{display:flex;flex-direction:column;align-items:center}
+    h1{margin:0;font-size:26px;color:var(--text)}
+    p.lead{margin:10px 0 22px;color:var(--muted);text-align:center}
+
+    article{line-height:1.75;font-size:17px;color:#222}
+    article p{margin:14px 0}
+    .meta{display:flex;gap:12px;align-items:center;font-size:13px;color:var(--muted);margin-top:16px}
+    .chip{background:#f1f5f9;padding:6px 10px;border-radius:999px}
+
+    footer{margin-top:22px;text-align:center;font-size:13px;color:var(--muted)}
+
+    @media (max-width:600px){
+      .container{margin:24px;padding:18px}
+      h1{font-size:20px}
+      article{font-size:16px}
+    }
+  </style>
 </head>
 <body>
+  <a class="skip" href="#main">स्किप टू मेन कंटेंट</a>
+  <div class="container" role="main" id="main">
+    <header>
+      <h1>सुबह की शुरुआत: एक शांत कदम</h1>
+      <p class="lead">एक शांत सुबह, जहां हम दिन की शुरुआत अपने साथ थोड़ी सी बात करके करते हैं।</p>
+      <div class="meta" aria-hidden="true">
+        <span class="chip">6 मिनट पढ़ने के लिए</span>
+        <time datetime="2025-10-26">26 अक्टूबर 2025</time>
+      </div>
+    </header>
 
-  <!-- 頂部 Banner 輪播 -->
-  <div class="carousel">
-    <div class="slides">
-      <img src="static/picture/banner1.jpg" alt="Banner 1">
-      <img src="static/picture/banner2.jpg" alt="Banner 2">
-      <img src="static/picture/banner3.jpg" alt="Banner 3">
-    </div>
+    <article aria-label="कहानी: सुबह की शुरुआत">
+      <p>सुबह की हल्की रोशनी में, वह कुछ पल अपने लिए रखती थी। न कोई हड़बड़ी, न कोई सूची, बस एक शांत सांस और धीरे-धीरे दिन का स्वागत।</p>
+
+      <p>वह हर दिन सिर्फ़ एक छोटा काम चुनती थी — जैसे 10 मिनट टहलना, एक पेज पढ़ना, या बस चाय के कप के साथ चुपचाप बैठना। ये छोटे-छोटे कदम उसके भीतर स्पष्टता और स्थिरता लाते थे।</p>
+
+      <p>उसे एहसास हुआ कि सुबह को जल्दी जीतने की ज़रूरत नहीं है। असल जीत है — अपने भीतर के शांति के स्थान को पहचानना और उसे रोज़ थोड़ा मजबूत करना।</p>
+
+      <p>अगर आप भी चाहें, तो कल सुबह बस एक छोटा कदम चुनिए। जल्दी नहीं, बस निरंतरता।</p>
+    </article>
+
+    <footer>
+      © 2025 शाम की सोच। केवल पढ़ने और प्रेरणा के लिए।
+    </footer>
   </div>
-
-  <!-- 會員卡片 -->
-  <section class="member-section">
-    <h2>會員卡片</h2>
-    <div class="member-grid">
-      <div class="card">會員 A</div>
-      <div class="card">會員 B</div>
-      <div class="card">會員 C</div>
-      <div class="card">會員 D</div>
-    </div>
-  </section>
-
-  <!-- Line 按鈕 -->
-  <div class="line-btn">
-    <button onclick="addLine()">加入 Line</button>
-  </div>
-
-  <script src="static/js/script.js"></script>
 </body>
 </html>
